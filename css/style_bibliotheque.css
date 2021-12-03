@@ -1,0 +1,30 @@
+/********Généralités**********/
+h3{
+    font-size: 30px;
+}
+h1{
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+.img01 img{
+    height: 426px;
+    width: 640px;
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5); */
+}
+.img02 img{
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5); */
+}
+.section{
+    display: flex;
+    flex-wrap: wrap column;
+    gap: 10px;
+}
+.para_biblio01 p, .para_biblio02 p{
+    padding: 10px 30px;
+    margin-top: 10px;
+    text-align: justify;
+}

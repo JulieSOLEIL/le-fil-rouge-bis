@@ -1,0 +1,195 @@
+/*  ******POLICE ET GENERALITE ********** */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Andada+Pro:ital@0;1&family=Oswald:wght@200;300&display=swap');
+*{
+    text-align: center;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Andada Pro', serif;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+h2{
+    text-transform: uppercase;
+    padding-top: 30px;
+    font-size: 2em;
+}
+a{
+    font-family: 'Andada Pro', serif;
+    text-decoration: none;
+    color: antiquewhite;
+}
+/***********************NAVBAR ***************************/
+nav{
+    overflow: hidden;
+    background-color: #002244;
+    position: fixed;
+    width: 100%;
+    opacity: 0.9;
+    z-index: 5;
+}
+.logo{
+    float: left;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.nav-txt{
+    padding-top: 12px;
+}
+.dropdown{
+    margin-top: 12px;
+}
+header nav img{
+    height: 58px;
+    margin-top: -10px;
+    padding-left: 10px;  
+}
+header li{
+    float: right;
+    font-size: 1.2em;
+}
+header li a{
+    display: block;
+    padding: 18px 16px;
+}
+.navbar .nav-txt a:hover, .deroulant:hover {
+    background-color: rgb(199, 214, 219);
+    color: #002244;
+    transition: 0.3s ;
+}
+.dropdown:hover {
+    background-color: rgb(199, 214, 219);
+    color: #002244;
+    transition: 0.3s ;
+} 
+.sous {
+      display: none;
+      position: fixed;
+      background-color: rgb(199, 214, 219);
+      min-width: 160px;
+      z-index: 1;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.sous a{
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    color: black;
+    font-size: 25px;
+    padding: 20px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.sous a:hover{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: antiquewhite;
+    background-color: #002244;
+    transition: 0.3s ;
+}
+ul li ul li {
+    clear: both;
+    width: 100%;
+  }
+.dropdown:hover .sous {
+    display: block;
+}
+/**************SEARCH BAR****************/
+#searchBar{
+    padding-top: 10em;
+    padding-bottom:6em;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: rgb(199, 214, 219);
+}
+#searchBar button{
+    background-color: #002244;
+
+}
+#searchBar i {
+    color: white;
+    font-size: 3.6em;
+}
+
+#searchBar input{
+    width: 50%;
+    height: 60px;
+    background-color: rgb(212, 214, 221);
+    text-align: left;
+    padding-left: 15px;
+    font-size: 1.2em;
+}
+label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+/***************PREMIER TRAIT*************/
+/* #premierTrait{
+    height: 0.1ch;
+    opacity: 0.3;
+    width: 60%;
+    margin: -3px auto;
+    background-color: #002244 ;
+} */
+#Trait{
+    align-items: center;
+    height: 2px;
+    opacity: 0.3;
+    width: 90%;
+    margin: 50px;
+    background-color: #002244 ;
+    
+}
+/****************PRESENTATION **************/
+h1{
+    font-size: 4em;
+}
+#trait{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 2px;
+    opacity: 0.3;
+    width: 50%;
+    margin-top: 3em;
+    background-color: #002244 ;
+}
+.imgPrincipale img {
+    margin-top: 16em;
+    height: 700px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+}
+
+#presentation{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 100px;
+    padding: 50px;
+    gap: 20px;
+    /* background-color: rgb(211, 233, 240); */
+}
+#presentation img{
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+/***************FOOTER*************/
+footer{
+    border-top: 1px solid black;
+    background-color: #002244;  
+}
+#copyright{
+    padding: 20px 0 20px 0;
+    color: antiquewhite;
+}
+#icons{
+    padding: 20px 0 20px 0;
+}
