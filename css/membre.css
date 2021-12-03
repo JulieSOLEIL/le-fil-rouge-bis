@@ -1,6 +1,9 @@
 /********PARTIE INFO**********/
 main{
     padding: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
 }
 .image img{
     width: 400px;
@@ -50,47 +53,56 @@ main{
 
 .container{
     margin: 100px 0;
-    padding: 25px 30px;
+    padding: 25px 200px;
     width: 1227px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    /* height: 100vh; */
-    justify-content: center;
-    align-items: center;
     border: 2px solid lightcyan;
     background-color: lightcyan;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
-.container .title{
-    font-size: 25px;
-    font-weight: 500;
+.container h2{
+    font-size: 30px;
+    font-weight: 700;
     position: relative;
 }
-.container .title::before{
+.container h2::before{
     content: '';
     position: absolute;
-    left: 0;
     bottom: 0;
     height: 3px;
-    width: 100px;
+    width: 253px;
     background: linear-gradient(135deg,#002244,#ACB6E5) ;
 }
 .container .category-details{
-    padding-top: 50px;
+    padding-top: 30px;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .container form .user-details{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0 12px 0;
+    /* justify-content: space-between; */
+    /* margin: 20px 0 12px 0; */
+    padding: 20px 0 20px 0;
     /* margin-top: 50px;
     margin-bottom: 50px;   */
 }
 form .user-details .input-box {
     margin-bottom: 15px;
-    width: calc(100% / 2 - 20px);
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+    /* width: calc(100% / 2 - 20px); */
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    margin-left: 18%;
 }
 form .input-box span.details{
     display: block;
@@ -98,8 +110,7 @@ form .input-box span.details{
     margin-bottom: 5px;
   }
 .user-details .input-box .details {
-    float: left;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 5px;
 }
 .user-details .input-box input{
@@ -119,15 +130,29 @@ form .input-box span.details{
 .user-details .input-box input:valid{
     border-color: #002244;
 }
-form .category-details .category-title {
+form .category-details h3 {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
+    margin-right: 50px;
 }
-form .category-details .category{
+.container .category-details .top {
     display: flex;
-    width: 80%;
-    margin: 14px 0;
-    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .category-details .top .category{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* margin: 3px 0; */
+    /* padding-bottom: 10px; */
+}
+form .category-details .category .subtitle{
+    padding-right: 25px;
+    font-weight: 100;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 }
 form .category-details .category label{
     display: flex;
@@ -135,8 +160,8 @@ form .category-details .category label{
     cursor: pointer;
 }
 form .category-details .category .dot{
-    height: 18px;
-    width: 18px;
+    height: 9px;
+    width: 9px;
     background: #d9d9d9;
     border-radius: 50%;
     margin-right: 10px;
@@ -159,7 +184,8 @@ form .button{
 }
 form .button input{
     height: 100%;
-    width: 10%;
+    width: 100%;
+    padding: 10px 20px;
     outline: none;
     color: antiquewhite;
     border: none;
@@ -176,27 +202,24 @@ form .button input:hover{
     background: #ACB6E5;
     color: #002244;
 }
-@media (max-width: 1250px) {
-    .container{
-        max-width: 100%;
-    }
-    form .user-details .input-box {
-        margin: 15px;
-        width: 100%;
-    }
-    form .category-details .category {
-        width: 100%;
-    }
-    .content form .user-details{
-        max-height: 300px;
-        overflow-y: scroll;
-    }
-    .user-details::-webkit-scrollbar{
-        width: 10px;
+@media (max-width: 1300px) {
+    .info{
+        padding: 15px;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 15px;
+        border: 2px solid lightcyan;
+        background-color: lightcyan;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        border-radius: 10px;
     }
 }
-@media(max-width: 459px){
-    .container .content .category{
-    flex-direction: column;
+@media (max-width: 1227px) {
+    nav .navbar{
+        
     }
-}   
+    
+}
+@media (max-width: 992px) {
+
+}

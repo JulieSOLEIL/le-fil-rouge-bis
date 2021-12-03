@@ -38,35 +38,37 @@
     </section>
 
     <section class="container">
-        <div class="title">Inscrivez-vous</div>
+        <h2>Inscrivez-vous</h2>
         <div class="content">
         <form action="#">
         <div class="category-details">
-            <input type="radio" name="gender" id="dot-1">
-            <input type="radio" name="gender" id="dot-2">
-            <input type="radio" name="gender" id="dot-3">
-            <input type="radio" name="gender" id="dot-4">
-            <span class="category-title">Vous etes</span>
-            <div class="category">
-                <label for="dot-1">           
-                <span class="dot one"></span>
-                <span class="gender">Un homme</span>
-                </label>
-                <label for="dot-2">
-                <span class="dot two"></span>
-                <span class="gender">Une femme</span>
-                </label>
-            </div>
-            <span class="category-title">Catégorie membre</span>
-            <div class="category">
-                <label for="dot-3">
-                <span class="dot three"></span>
-                <span class="category-info">Etudiant</span>
-                </label>
-                <label for="dot-4">
-                <span class="dot four"></span>
-                <span class="category-info">Professeur</span>
-                </label>
+            <div class="top">
+                <input type="radio" name="subtitle" id="dot-1">
+                <input type="radio" name="subtitle" id="dot-2">
+                <input type="radio" name="subtitle" id="dot-3">
+                <input type="radio" name="subtitle" id="dot-4">
+                <div class="category">
+                <h3>Vous êtes:</h3>
+                    <label for="dot-1">           
+                    <span class="dot one"></span>
+                    <span class="subtitle">Un homme</span>
+                    </label>
+                    <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="subtitle">Une femme</span>
+                    </label>
+                </div>
+                <div class="category">
+                <h3>Catégorie membre:</h3>
+                    <label for="dot-3">
+                    <span class="dot three"></span>
+                    <span class="subtitle">Etudiant</span>
+                    </label>
+                    <label for="dot-4">
+                    <span class="dot four"></span>
+                    <span class="subtitle">Professeur</span>
+                    </label>
+                </div>
             </div>
             <div class="user-details">
                 <div class="input-box">
