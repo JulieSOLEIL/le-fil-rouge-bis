@@ -15,7 +15,7 @@ $page = 'header';
                         <li><a class="sousTxt" href="/pages/conditions.php">conditions générales</a></li>
                     </ul>
                 </li>
-                <li class="nav-txt"><a href="#">Nos Collections</a>
+                <li class="nav-txt"><a href="/pages/collections.php">Nos Collections</a>
                 </li>
                 <li class="nav-txt"><a href="/pages/bibliotheque.php">La Bibliothèque</a>
                 </li>
