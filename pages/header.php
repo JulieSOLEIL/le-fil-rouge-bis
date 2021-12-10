@@ -6,7 +6,7 @@ $page = 'header';
             <ul class="navbar">
                 <li class="logo"><a href="../index.php"><img src="/images/open-book.png" alt="logo"> Bibliothèque de L'INCONNU</a>
                 </li>
-                <li class="nav-txt"><a href="#">Se connecter? <i class="fas fa-user-circle"></a></i></li>
+                <li class="nav-txt"><a href="/pages/connexion.php">Se connecter? <i class="fas fa-user-circle"></a></i></li>
                 <li class="nav-txt"><a href="#">Mon panier <i class="fas fa-shopping-basket"></a></i></li>
                 <li class="dropdown"><a>Infos Pratiques <i class="fa fa-caret-down"></i></a>
                     <ul class="sous">
