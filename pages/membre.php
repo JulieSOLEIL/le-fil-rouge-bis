@@ -15,6 +15,9 @@
     ?>
 <main>  
     <section class="info">
+        <h3><i class="fas fa-exclamation-triangle"></i> Pas d'inscription en ligne pour le moment <i class="fas fa-exclamation-triangle"></i><br> Merci de vous déplacer directement à la bibliothèque et de vous inscrire sur place auprès de la bibliothécaire</h3>
+    </section>
+    <section class="info">
         <div>
             <h2>Devenir membre</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, quasi voluptatibus eligendi, consectetur, ipsum tempore nihil dignissimos illo veniam quam nulla itaque eaque dolore molestias voluptate? Adipisci, doloribus natus? Accusantium.

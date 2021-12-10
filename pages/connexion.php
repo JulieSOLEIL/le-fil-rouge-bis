@@ -22,7 +22,7 @@ $page = 'connexion';
     <main>
         <div class="container">
             <h3>Identifiez-vous</h3>
-            <form method="POST" action="verifConnexion.php">
+            <form method="POST" action="../security/verifConnexion.php">
                 <div class="row">
                     <div class="col-25">
                         <label for="idForm">Identifiant:</label>
