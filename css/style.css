@@ -49,6 +49,9 @@ nav{
 .dropdown{
     margin-top: 12px;
 }
+.drop{
+    margin-top: 12px;
+}
 header nav img{
     height: 58px;
     margin-top: -10px;
@@ -72,6 +75,11 @@ header li a{
     color: #002244;
     transition: 0.3s ;
 } 
+.drop:hover {
+    background-color: rgb(199, 214, 219);
+    color: #002244;
+    transition: 0.3s ;
+} 
 .sous {
       display: none;
       position: fixed;
@@ -85,8 +93,8 @@ header li a{
     display: block;
     float: none;
     color: black;
-    font-size: 25px;
-    padding: 20px 20px;
+    font-size: 20px;
+    padding: 15px 12px;
     text-decoration: none;
     text-align: center;
 }
@@ -103,6 +111,10 @@ ul li ul li {
 .dropdown:hover .sous {
     display: block;
 }
+.drop:hover .sous {
+    display: block;
+}
+
 /**************SEARCH BAR****************/
 #searchBar{
     padding-top: 10em;
@@ -195,4 +207,13 @@ footer{
 }
 #icons{
     padding: 20px 0 20px 0;
+}
+/********FORMULAIRE************/
+.erreur{
+    border: 1px solid rgb(241, 205, 170);
+    border-radius: 5px;
+    background-color: rgb(241, 205, 170);
+    color: red;
+    font-size: 22px;
+    padding: 10px 5px;
 }
