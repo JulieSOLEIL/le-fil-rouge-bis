@@ -14,7 +14,7 @@ $page = 'conditions';
 </head>
 <body>
     <?php
-    include '../pages/header.php';
+    include '../header.php';
     ?>
 
     <main>
@@ -118,7 +118,7 @@ $page = 'conditions';
 
 
     <?php
-    include '../pages/footer.php';
+    include '../footer.php';
     ?>
 </body>
 </html>

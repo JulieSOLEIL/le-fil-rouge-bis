@@ -15,7 +15,7 @@ $page = 'trouver';
 </head>
 <body>
     <?php
-    include '../pages/header.php';
+    include '../header.php';
     ?>
 
     <main class="contenu">
@@ -39,7 +39,7 @@ $page = 'trouver';
         </section>
     </main>
 <?php
-include '../pages/footer.php';
+include '../footer.php';
 ?>
 </body>
 </html>

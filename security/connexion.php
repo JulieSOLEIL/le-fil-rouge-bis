@@ -9,7 +9,7 @@ if ($methode === 'POST') {
 
     require '../base/dao.php';
 
-    $login = filter_input(INPUT_POST, 'identifiant', FILTER_SANITIZE_STRING);
+    $login = filter_input(INPUT_POST, 'identifiant', FILTER_SANITIZE_SPECIAL_CHARS);
     $psw = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
 
     $refPdo = new PDO($dsn, $userName, $password);
@@ -31,7 +31,7 @@ if ($methode === 'POST') {
             $_SESSION['nom_user'] = $user['nom_user'];
             $_SESSION['categorie_user'] = $user['categorie_user'];
             header('Location: ../index.php');
-            exit();
+            // exit();
         } else { // mot de passe incorrect
             $erreur = 'Mot de passe erroné !';
         }
@@ -40,6 +40,7 @@ if ($methode === 'POST') {
         $login ='';
     }
 }
+session_write_close();
 ?>
 
     <!DOCTYPE html>

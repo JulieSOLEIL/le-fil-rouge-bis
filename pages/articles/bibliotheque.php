@@ -14,7 +14,7 @@ $page = 'bibliotheque';
 </head>
 <body>
     <?php
-    include '../pages/header.php';
+    include '../header.php';
     ?>
 
     <main>
@@ -62,7 +62,7 @@ $page = 'bibliotheque';
     </main>
     
     <?php
-    include '../pages/footer.php';
+    include '../footer.php';
     ?>
 </body>
 </html>

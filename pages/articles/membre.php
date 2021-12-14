@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php
-    include '../pages/header.php';
+    include '../header.php';
     ?>
 <main>  
     <section class="info">
@@ -42,7 +42,7 @@
 </main> 
 
 <?php
-include '../pages/footer.php';
+include '../footer.php';
 ?>
 
 </body>

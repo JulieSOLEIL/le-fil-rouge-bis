@@ -14,7 +14,7 @@ $page = 'collections';
 </head>
 <body>
     <?php
-    include '../pages/header.php';
+    include '../header.php';
     ?>
 
     <main class="contenu">
@@ -63,7 +63,7 @@ $page = 'collections';
 
 
     <?php
-    include '../pages/footer.php';
+    include '../footer.php';
     ?>
 </body>
 </html>
