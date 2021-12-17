@@ -1,8 +1,15 @@
 <?php
+session_start();
+require '../base/dao.php';
+
 $page = 'collections';
+$collection = filter_input(INPUT_GET, 'collection', FILTER_SANITIZE_STRING);
+
+?>
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +19,7 @@ $page = 'collections';
     <link rel="stylesheet" href="/css/collections.css">
     <script src="https://kit.fontawesome.com/c19fce56fe.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <?php
     include '../pages/header.php';
@@ -61,9 +69,30 @@ $page = 'collections';
         </section>
     </main>
 
+    <?php                       
+
+//                        $refPdo = new PDO($dsn, $userName, $password); 
+
+                        // interroger la base de données avec la categorie
+
+                        $articles = getAllArticleByCategorie($cat);
+                        foreach($articles as $article) {
+
+                            echo '<tr>';
+                            echo '<td class="text-center">'.$article['code_art'].'</td>';
+                            echo '<td>'.$article['libelle_art'].'</td>';
+                            echo '<td class="prix text-center">'.$article['prix_ht_art'].'</td>';
+                            echo '<td class="text-center"><input type="number" value="0" min="0" /></td>';
+                            echo '<td class="text-center"></td>';
+                            echo '</tr>';
+    
+                        }
+                    ?>
+
 
     <?php
     include '../pages/footer.php';
     ?>
 </body>
+
 </html>

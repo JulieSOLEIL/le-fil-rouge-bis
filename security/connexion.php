@@ -9,9 +9,9 @@ if ($methode === 'POST') {
 
     require '../base/dao.php';
 
-    $login = filter_input(INPUT_POST, 'identifiant', FILTER_SANITIZE_STRING);
+    $login = filter_input(INPUT_POST, 'identifiant', FILTER_SANITIZE_SPECIAL_CHARS);
     $psw = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
-
+ 
     $refPdo = new PDO($dsn, $userName, $password);
 
     // interroger la base de données avec le login
