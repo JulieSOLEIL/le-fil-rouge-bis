@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
     $page = 'accueil';
 ?>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
     <?php
     include './pages/header.php';
     ?>
- <section id="presentation">
+ <section id="presentation"> 
     <div class="introTxt">
         <h2>Un lieu de partage</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dicta alias nihil voluptates, corrupti animi illum quidem sed quisquam provident ea molestiae rerum odit quis consequuntur amet, dignissimos incidunt earum! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem in minima consectetur esse ipsum atque necessitatibus, pariatur harum soluta obcaecati deserunt sequi autem assumenda, rem aspernatur consequatur excepturi ad a.

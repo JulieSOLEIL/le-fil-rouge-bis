@@ -7,6 +7,7 @@ $password = '';
 try {
     $refPdo = new PDO($dsn, $userName, $password);
 } catch (PDOException $err) {
+    var_dump($err);
     header('Location: /pages/erreur.php');
     exit();
 }

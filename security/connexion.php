@@ -84,7 +84,7 @@ if ($methode === 'POST') {
                             <label for="mdp">Mot de passe:</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" id="mdp" name="password" placeholder="Entrez votre mot de passe...">
+                            <input type="password" id="mdp" name="password" placeholder="Entrez votre mot de passe...">
                         </div>
                     </div>
                     <div class="row">
