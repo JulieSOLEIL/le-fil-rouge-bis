@@ -7,7 +7,7 @@ $password = '';
 try {
     $refPdo = new PDO($dsn, $userName, $password);
 } catch (PDOException $err) {
-    var_dump($err);
+    // var_dump($err);
     header('Location: /pages/erreur.php');
     exit();
 }
@@ -24,3 +24,26 @@ function getAllArticleByCategorie($categ){
 
     return $articles;
 }
+
+function getUserByLogin($log) {
+
+    global $refPdo;
+
+    $sql = 'SELECT * FROM users WHERE pseudo =:identifiant';
+    $stat_user = $refPdo->prepare($sql);
+    $stat_user->bindParam(':identifiant', $log, PDO::PARAM_STR);
+    $stat_user->execute();
+
+    if ($stat_user->rowCount() == 1) {
+        // Comparer le $psw avec mdp de la database
+        $user = $stat_user->fetch(PDO::FETCH_ASSOC);
+        return $user;
+    }
+    return false;
+}
+
+// function addOuvrage($isbn_ouvrage, $photo, $titre_ouvrage, $date_parution, $dispo, $id_auteur, $id_collection, $id_editeur) {
+
+//     if(require())
+
+// }

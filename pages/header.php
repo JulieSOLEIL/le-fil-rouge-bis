@@ -1,4 +1,5 @@
 <?php
+// session_start();
 if (isset($_SESSION['nom_user'])) {
     $identifiant = $_SESSION['nom_user'];
 } else {

@@ -12,19 +12,12 @@ if ($methode === 'POST') {
     $login = filter_input(INPUT_POST, 'identifiant', FILTER_SANITIZE_SPECIAL_CHARS);
     $psw = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
  
-    $refPdo = new PDO($dsn, $userName, $password);
-
-    // interroger la base de données avec le login
-    $sql = 'SELECT * FROM users WHERE pseudo =:ident';
-    $stat_user = $refPdo->prepare($sql);
-    $stat_user->bindParam(':ident', $login, PDO::PARAM_STR);
-    $stat_user->execute();
+      // interroger la base de données avec le login
+      $user = getUserByLogin($login);
    
-    if ($stat_user->rowCount() == 1) {
+    if ($user) {
         // comparer le $psw avec le mot de passe de la base de données
-        $user = $stat_user->fetch(PDO::FETCH_ASSOC);
 
-        $mdp = 'yoma004';
         if (password_verify($psw, $user['psw_user'])) {
             // si connecter alors mémoriser en session le login et ...
 

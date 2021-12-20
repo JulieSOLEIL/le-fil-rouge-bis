@@ -1,10 +1,12 @@
 .contenu{
-    margin-bottom: 100px;
+    margin: 0 600px 100px 600px; 
 }
 .contenant{
+    /* display: block; */
 display: flex;
-flex-wrap: wrap;
-justify-content: space-evenly;
+flex-flow: wrap column;
+justify-content: center;
+align-items: center;
 border: 2px lightcyan solid ;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 border-radius: 10px;
@@ -12,20 +14,100 @@ background-color: lightcyan;
 padding: 30px;
 margin: 30px;
 }
-.cube{
-    border: 1px solid antiquewhite;
+.cube {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+    /* border: 1px solid antiquewhite;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: antiquewhite;
-    border-radius: 10px;
-    width: 20%;
+    background-color: lightcyan;
+    border-radius: 10px; */
+    width: 90%;
     font-size: 22px;
     margin: 20px;
-    padding-top: 30px;
+    padding-top: 10px 0;
     padding-bottom: 30px;
 }
-.cube:hover{
+button a {
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+button a:hover{
+    background: antiquewhite;
+    color: orangered;
+}
+button{
+    padding: 10px;
+    background-color: antiquewhite;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+    padding: 15px;
+}
+button:hover{
     transform: scale(0.99);
     background: antiquewhite;
     color: orangered;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
+.contenant input{
+    text-align: left;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 5px ;
+    margin-left: 10px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease; 
+}
+/* quand on clique sur input, un border se cree */
+.contenant input:hover{
+    border-color: #002244;
+}
+/*.cube a{
+    color: black;
+}
+.cube a:hover{
+    color: orangered;
+} */
+/***************MEDIA QUERIES******************/
+@media screen and (max-width: 1855px) {
+    .contenu{
+        margin: 0 500px 100px 500px; 
+    }
+}
+@media screen and (max-width: 1680px) {
+    .contenu{
+        margin: 0 400px 100px 400px; 
+    }
+}
+@media screen and (max-width: 1550px) {
+    .contenu{
+        margin: 0 400px 100px 300px; 
+    }
+}
+@media screen and (max-width: 1360px) {
+    .contenu{
+        margin: 0 200px 100px 200px; 
+    }
+}
+@media screen and (max-width: 1060px) {
+    .contenu{
+        margin: 0 100px 100px 100px; 
+    }
+}
+@media screen and (max-width: 691px) {
+    .contenu{
+        margin: 0 80px 100px 80px; 
+    }
+}
+@media screen and (max-width: 591px) {
+    .contenu{
+        margin: 0 60px 100px 60px; 
+    }
+}
+

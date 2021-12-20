@@ -1,4 +1,5 @@
 <?php
+session_start();
 $page = 'bibliotheque';
 ?>
 <!DOCTYPE html>

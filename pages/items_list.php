@@ -1,17 +1,11 @@
 <?php
-require '../base/dao.php';
 session_start();
+require '../base/dao.php';
+
     $page = 'items_list';
     $cat = filter_input(INPUT_GET, 'cat', FILTER_SANITIZE_STRING);
 ?>
-<!--
-/**
- * @author Didier Bonneau
- * @copyright (c) Afpa, DWWM
- * @version 1.0 du 01/04/2019
- * Fichier d'affichage des produits de la catégorie Papeterie
- */
--->
+
 <!DOCTYPE html>
 <html>
     <head>

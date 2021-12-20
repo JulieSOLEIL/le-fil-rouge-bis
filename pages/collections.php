@@ -3,9 +3,7 @@ session_start();
 require '../base/dao.php';
 
 $page = 'collections';
-$collection = filter_input(INPUT_GET, 'collection', FILTER_SANITIZE_STRING);
-
-?>
+// $collection = filter_input(INPUT_GET, 'collection', FILTER_SANITIZE_STRING);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +15,7 @@ $collection = filter_input(INPUT_GET, 'collection', FILTER_SANITIZE_STRING);
     <title>Bibliothèque de L'Inconnu</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/collections.css">
-    <script src="https://kit.fontawesome.com/c19fce56fe.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c19fce56fe.js" crossorigin="anonymous"></script> 
 </head>
 
 <body>
@@ -27,69 +25,84 @@ $collection = filter_input(INPUT_GET, 'collection', FILTER_SANITIZE_STRING);
 
     <main class="contenu">
         <div class="titre">
-            <h1>Collections</h1>
+            <h1>Recherche d'ouvrages</h1>
         </div>
-        <section class="contenant">
-            <div class="cube">
-                <h3>Infomatique</h3>
-            </div>
-            <div class="cube">
-                <h3>Medecine</h3>
-            </div>
-            <div class="cube">
-                <h3>Art et Litterature</h3>
-            </div>
-            <div class="cube">
-                <h3>Droit</h3>
-            </div>
-            <div class="cube">
-                <h3>Economie</h3>
-            </div>
-            <div class="cube">
-                <h3>Gestion entreprise</h3>
-            </div>
-            <div class="cube">
-                <h3>Commerce</h3>
-            </div>
-            <div class="cube">
-                <h3>Architecture</h3>
-            </div>
-            <div class="cube">
-                <h3>Histoire</h3>
-            </div>
-            <div class="cube">
-                <h3>Geographie</h3>
-            </div>
-            <div class="cube">
-                <h3>Comptabilite</h3>
-            </div>
-            <div class="cube">
-                <h3>Psychologie</h3>
-            </div>
+        <form class="contenant" method="GET">
+        <div class="cube">
+            <label>Par Collections</label>
+            <input type="text" name="collection" id="collection" placeholder="Entrez les mots-clés">
+        </div>
+        <div id="result-search"></div>
+        <div class="cube">
+            <label>Par Thèmes</label>
+            <input type="text" name="theme" placeholder="Entrez les mots-clés">
+        </div>
+        <div class="cube">
+            <label>Par Auteurs</label>
+            <input type="text" name="auteur" placeholder="Entrez les mots-clés">
+        </div>
+        <button type="submit">Rechercher</button>
         </section>
+        <!-- <section class="contenant">
+            <div class="cube">
+                <label>par collection</label>
+                <select id="collection" name="collection" size="2" multiple>
+                <option value="arrow">Arrow</option>
+                <option value="atlas">Atlas Illustre</option>
+                <option value="babel">Babel</option>
+                <option value="beaux_livre">Beaux Livres Relies</option>
+                <option value="bibliotheca">Bibliotheca</option>
+                <option value="bloc_notes">Bloc-Notes</option>
+                <option value="cahiers">Cahiers Libres</option>
+                <option value="comprendre">Comprendre</option>
+                <option value="divers">Divers</option>
+                <option value="dunod">Dunod</option>
+                <option value="epsilon">Epsilon</option>
+                <option value="eyrolles">Eyrolles</option>
+                <option value="fil">Fil Droit</option>
+                <option value="grd_larousse">Grand Larousse</option>
+                <option value="larousse">Larousse</option>
+                <option value="ldp">Ldp</option>
+                <option value="ldp_doc">Ldp Documents</option>
+                <option value="neant">Le Néant</option>
+                <option value="librio">Librio</option>
+                <option value="meilleur_droit">Meilleur du Droit</option>
+                <option value="mytho">Mytho</option>
+                <option value="nuls_poche">Nuls en Poche</option>
+                <option value="opti">Optimum</option>
+                <option value="poche">Poche</option>
+                <option value="odile">Poche Odile Jacob</option>
+                <option value="nuls_business">Pour Les Nuls Business</option>
+                <option value="RI">Ressources Informatiques</option>
+                <option value="revue_point">Revue Le Point Hors-Série</option>
+                <option value="sorciere">Sorcières</option>
+                <option value="texto">TEXTO</option>
+                <option value="totem">Totem</option>
+                <option value="oeuvres">Oeuvres et Thèmes</option>
+            </select>
+            </div>
+            <div class="cube">
+                <label>par auteur</label>
+                <select name="auteur" id="auteur" size="2" multiple>
+                    <option value="acissi">ACISSI</option>
+                    <option value="Andre">André </option>
+                </select>
+            </div>
+            <div class="cube">
+                <label>par thème</label>
+                <select name="theme" id="theme">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="cube">
+                <button><a href="#"> Voir tout</button>
+            </div>
+
+        </section> -->
     </main>
 
-    <?php                       
-
-//                        $refPdo = new PDO($dsn, $userName, $password); 
-
-                        // interroger la base de données avec la categorie
-
-                        $articles = getAllArticleByCategorie($cat);
-                        foreach($articles as $article) {
-
-                            echo '<tr>';
-                            echo '<td class="text-center">'.$article['code_art'].'</td>';
-                            echo '<td>'.$article['libelle_art'].'</td>';
-                            echo '<td class="prix text-center">'.$article['prix_ht_art'].'</td>';
-                            echo '<td class="text-center"><input type="number" value="0" min="0" /></td>';
-                            echo '<td class="text-center"></td>';
-                            echo '</tr>';
-    
-                        }
-                    ?>
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/collection.js"></script>
     <?php
     include '../pages/footer.php';
     ?>
