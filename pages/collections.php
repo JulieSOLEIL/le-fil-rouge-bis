@@ -15,7 +15,7 @@ $page = 'collections';
     <title>Bibliothèque de L'Inconnu</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/collections.css">
-    <script src="https://kit.fontawesome.com/c19fce56fe.js" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/c19fce56fe.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,23 +27,25 @@ $page = 'collections';
         <div class="titre">
             <h1>Recherche d'ouvrages</h1>
         </div>
-        <form class="contenant" method="GET">
-        <div class="cube">
-            <label>Par Collections</label>
-            <input type="text" name="collection" id="collection" placeholder="Entrez les mots-clés">
-        </div>
-        <div id="result-search"></div>
-        <div class="cube">
-            <label>Par Thèmes</label>
-            <input type="text" name="theme" placeholder="Entrez les mots-clés">
-        </div>
-        <div class="cube">
-            <label>Par Auteurs</label>
-            <input type="text" name="auteur" placeholder="Entrez les mots-clés">
-        </div>
-        <button type="submit">Rechercher</button>
-        </section>
-        <!-- <section class="contenant">
+        <section class="contenant">
+            <div class="cube">
+                <label>Par Collections</label>
+                <input type="text" name="collection" id="collection" placeholder="Entrez les mots-clés">
+            </div>
+            <div id="result-search"></div>
+
+            <div class="cube">
+                <label>Par Thèmes</label>
+                <input type="text" name="theme" placeholder="Entrez les mots-clés">
+            </div>
+
+            <div class="cube">
+                <label>Par Auteurs</label>
+                <input type="text" name="auteur" placeholder="Entrez les mots-clés">
+            </div>
+            <button type="submit">Rechercher</button>
+            </section>
+            <!-- <section class="contenant">
             <div class="cube">
                 <label>par collection</label>
                 <select id="collection" name="collection" size="2" multiple>
