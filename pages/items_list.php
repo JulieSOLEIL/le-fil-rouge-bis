@@ -1,68 +1,40 @@
 <?php
 session_start();
-require '../base/dao.php';
-
-    $page = 'items_list';
-    $cat = filter_input(INPUT_GET, 'cat', FILTER_SANITIZE_STRING);
+$page = 'items_list';
 ?>
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-        <title>
-            TP_PHP_Papeterie DWWM
-        </title>
-        <link href="/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="/css/papeterie.css" rel="stylesheet" type="text/css"/>
-       <style>
-            input[type=number] {
-                width: 45px;
-            }
-        </style>
-        <script src="/dist/js/jquery-3.4.1.js"></script>
-        <script src="/dist/js/bootstrap.js"></script>
-    </head>
-    <body>
-        <?php
-        require '_entete.php';
-        require '_nav.php';
-        ?>
-        <main class="container">
-            <h2>Liste des articles de la catégorie <?= $cat; ?></h2>
-            <table class="table table-bordered">
-                <tbody id="ligne">
-                    <tr>
-                        <th class="text-center w-10">REFERENCE</th>
-                        <th class="w-60">DESCRIPTION</th>
-                        <th class="text-center w-10">PRIX<br>UNITAIRE</th>
-                        <th class="text-center w-10">QUANTITE</th>
-                        <th class="text-center w-10">AJOUTER<br>AU PANIER</th>
-                    </tr>
-                    <?php
-//                        $dsn ='mysql:host=localhost;dbname=papeterie;charset=utf8';
-//                        $userName = 'root';
-//                        $password = '';
-//                        $refPdo = new PDO($dsn, $userName, $password); 
-                        // interroger la base de données avec la categorie
-                        $articles = getAllArticleByCategorie($cat);
-                        foreach($articles as $article) {
+<html lang="fr">
 
-                            echo '<tr>';
-                            echo '<td class="text-center">'.$article['code_art'].'</td>';
-                            echo '<td>'.$article['libelle_art'].'</td>';
-                            echo '<td class="prix text-center">'.$article['prix_ht_art'].'</td>';
-                            echo '<td class="text-center"><input type="number" value="0" min="0" /></td>';
-                            echo '<td class="text-center"></td>';
-                            echo '</tr>';
-    
-                        }
-                    ?>
-                </tbody>
-            </table>
-       </main>
-        <?php
-        require '_pied.php';
-        ?>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque de L'Inconnu</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/c19fce56fe.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <?php
+    include './pages/header.php';
+    ?>
+    <?php
+
+    foreach ($articles as $article) {
+        echo '<main id="book_card">';
+            '<div class="card">';
+            '<p class="dispo">'.$article['dispo']. '</p>';
+            '<img src="/upload/'.$article['photo'].'">';
+            '<h1>' .$article['titre_ouvrage']. '</h1>';
+           
+            '<p>Some text about the jeans..</p>';
+            '<p><button>Add to Cart</button></p>';
+        '</div>';
+    '</main>';
+    }
+    <?php
+    include './pages/footer.php';
+    ?>
+</body>
+
 </html>

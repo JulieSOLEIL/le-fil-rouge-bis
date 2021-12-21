@@ -32,7 +32,7 @@ $page = 'collections';
                 <label>Par Collections</label>
                 <input type="text" name="collection" id="collection" placeholder="Entrez les mots-clés">
             </div>
-            <div id="result-search"></div>
+            <div></div>
 
             <div class="cube">
                 <label>Par Thèmes</label>
@@ -43,7 +43,8 @@ $page = 'collections';
                 <label>Par Auteurs</label>
                 <input type="text" name="auteur" placeholder="Entrez les mots-clés">
             </div>
-            <button type="submit">Rechercher</button>
+            <button type="submit" id="result-search">Rechercher</button>
+            <div id="output"></div>
             </section>
             <!-- <section class="contenant">
             <div class="cube">
@@ -104,7 +105,7 @@ $page = 'collections';
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/js/collection.js"></script>
+    <script src="../js/collection.js"></script>
     <?php
     include '../pages/footer.php';
     ?>
