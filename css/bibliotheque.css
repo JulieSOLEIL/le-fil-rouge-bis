@@ -1,29 +1,32 @@
 /********Généralités**********/
-h3{
+.contenu_biblio{
+    margin-top: 150px;
+}
+.h3_biblio{
     font-size: 30px;
 }
-h1{
+.h1_biblio{
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 2em;
     margin-top: 1em;
 }
-.img01 img{
+.img01_biblio img{
     height: 426px;
     width: 640px;
     border-radius: 5px;
     /* box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5); */
 }
-.img02 img{
+.img02_biblio img{
     border-radius: 5px;
     /* box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5); */
 }
-.section{
+.section_biblio{
     display: flex;
     flex-wrap: wrap column;
     gap: 10px;
 }
-.para_biblio01 p, .para_biblio02 p{
+.para_biblio01 .p_biblio, .para_biblio02 .p_biblio{
     padding: 10px 30px;
     margin-top: 10px;
     text-align: justify;

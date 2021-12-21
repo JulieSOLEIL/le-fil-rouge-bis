@@ -1,6 +1,6 @@
 <?php
 session_start();
-$page = 'items_list';
+$vue = 'items_list';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,9 +16,7 @@ $page = 'items_list';
 
 <body>
     <?php
-    include './pages/header.php';
-    ?>
-    <?php
+    require '../vues/header.php';
 
     foreach ($articles as $article) {
         echo '<main id="book_card">';
@@ -32,8 +30,8 @@ $page = 'items_list';
         '</div>';
     '</main>';
     }
-    <?php
-    include './pages/footer.php';
+
+    include '../vues/footer.php';
     ?>
 </body>
 

@@ -1,20 +1,20 @@
 <?php
-
-$dsn = 'mysql:host=localhost;dbname=bibliotheque_inconnu;charset=utf8';
-$userName = 'root';
-$password = '';
-
-try {
-    $refPdo = new PDO($dsn, $userName, $password);
-} catch (PDOException $err) {
-    // var_dump($err);
-    header('Location: /pages/erreur.php');
-    exit();
+function connexion()
+{
+    $dsn = 'mysql:host=localhost;dbname=bibliotheque_inconnu;charset=utf8';
+    $userName = 'root';
+    $password = '';
+    try {
+        return new PDO($dsn, $userName, $password);
+    } catch (PDOException $err) {
+        throw new Exception('Site momentanément indisponible');
+        exit();
+    }
 }
+function getAllArticleByCategorie($categ)
+{
 
-function getAllArticleByCategorie($categ){
-
-    global $refPdo;
+    $refPdo = connexion();
 
     $sql = 'SELECT * FROM articles NATURAL JOIN categories WHERE libelle_cat=:cat;';
     $stat_article = $refPdo->prepare($sql);
@@ -25,9 +25,10 @@ function getAllArticleByCategorie($categ){
     return $articles;
 }
 
-function getUserByLogin($log) {
+function getUserByLogin($log)
+{
 
-    global $refPdo;
+    $refPdo = connexion();
 
     $sql = 'SELECT * FROM users WHERE pseudo =:identifiant';
     $stat_user = $refPdo->prepare($sql);
@@ -41,6 +42,29 @@ function getUserByLogin($log) {
     }
     return false;
 }
+function setNewUser($user)
+{
+    $refPdo = connexion();
+
+    $sql = 'INSERT INTO users VALUES (null, :nom_user, :prenom_user, :adresse_user, :email_user, :psw_user, :tel_user, :categorie_user, :pseudo);';
+    $stat_user = $refPdo->prepare($sql);
+
+    $stat_user->bindParam(':nom_user', $user['nom_user'], PDO::PARAM_STR);
+    $stat_user->bindParam(':prenom_user', $user['prenom_user'], PDO::PARAM_STR);
+    $stat_user->bindParam(':adresse_user', $user['adresse_user'], PDO::PARAM_STR);
+    $stat_user->bindParam(':email_user', $user['email_user'], PDO::PARAM_STR);
+    $psw = password_hash($user['psw_user'], PASSWORD_DEFAULT);
+    $stat_user->bindParam(':psw_user', $psw, PDO::PARAM_STR);
+    $stat_user->bindParam(':tel_user', $user['tel_user'], PDO::PARAM_STR);
+    $stat_user->bindParam(':categorie_user', $user['categorie_user'], PDO::PARAM_STR);
+    $stat_user->bindParam(':pseudo', $user['pseudo'], PDO::PARAM_STR);
+    try {
+        $stat_user->execute();
+    } catch (PDOException $pdoErr) {
+        throw new Exception('Login déjà existant !');
+    }
+}
+
 
 // function addOuvrage($isbn_ouvrage, $photo, $titre_ouvrage, $date_parution, $dispo, $id_auteur, $id_collection, $id_editeur) {
 

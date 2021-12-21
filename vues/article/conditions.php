@@ -1,6 +1,6 @@
 <?php
 session_start();
-$page = 'conditions';
+$vue = 'conditions';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,7 @@ $page = 'conditions';
 </head>
 <body>
     <?php
-    include '../pages/header.php';
+    require '../vues/header.php';
     ?>
 
     <main>
@@ -119,7 +119,7 @@ $page = 'conditions';
 
 
     <?php
-    include '../pages/footer.php';
+    include '../vues/footer.php';
     ?>
 </body>
 </html>

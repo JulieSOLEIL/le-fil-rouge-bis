@@ -63,7 +63,7 @@ input[type=submit]:hover {
 .container {
     display: flex;
     flex-flow: wrap column;
-    margin: 100px 200px;
+    margin: 250px 200px 166px 200px;
     padding: 25px 200px;
     /* width: 1227px; */
     /* box-sizing: border-box; */

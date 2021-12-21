@@ -1,6 +1,3 @@
-<?php
-$page = 'footer';
-?>
 <footer>
    <div id="copyright_et_icons">
         <div id="copyright">

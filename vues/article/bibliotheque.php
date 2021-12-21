@@ -1,34 +1,14 @@
-<?php
-session_start();
-$page = 'bibliotheque';
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliothèque de L'INCONNU</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/style_bibliotheque.css">
-    <script src="https://kit.fontawesome.com/c19fce56fe.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <?php
-    include '../pages/header.php';
-    ?>
-
-    <main>
-        <div class="contenu">
-            <h1>L'histoire de L'INCONNU</h1>
-            <section class="section">
-                <div class="partie01">
-                    <div class="img01">
-                    <img class="photo01" src="/images/img_library02.jpg" alt="bibliothèque">
+    <main class="contenu_biblio">
+        <div>
+            <h1 class="h1_biblio">L'histoire de L'INCONNU</h1>
+            <section class="section_biblio">
+                <div class="partie01_biblio">
+                    <div class="img01_biblio">
+                    <img class="photo01_biblio" src="/images/img_library02.jpg" alt="bibliothèque">
                     </div>
                     <div class="para_biblio01">
-                        <h3>Le Lieu</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maiores similique quam. Explicabo, voluptatibus deserunt distinctio est, nemo eum nisi minus sapiente quis quas ea incidunt odio aut, aspernatur doloremque.
+                        <h3 class="h3_biblio">Le Lieu</h3>
+                        <p class="p_biblio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maiores similique quam. Explicabo, voluptatibus deserunt distinctio est, nemo eum nisi minus sapiente quis quas ea incidunt odio aut, aspernatur doloremque.
                         Error nobis et modi voluptates rem minima asperiores similique vel dicta ratione delectus iste quas, veniam nam vero mollitia incidunt perspiciatis fugit doloribus totam ut consequatur tempore cumque cum! Beatae!
                         Maiores qui nesciunt sapiente non provident iusto, incidunt numquam cum ad nisi tempore doloremque voluptates in sequi sunt nihil esse dicta alias voluptatem? Reprehenderit, at. Minus sapiente eius maxime voluptatum.
                         Fugit, laborum fugiat delectus, esse quae accusantium exercitationem earum quo vero recusandae beatae, necessitatibus incidunt ipsum expedita ducimus enim facilis ab? Eligendi odio laborum soluta architecto maxime magni facilis. Ratione.
@@ -40,13 +20,13 @@ $page = 'bibliotheque';
                         </p>
                     </div>
                 </div>
-                <div class="partie02">
-                    <div class="img02">
-                    <img class="photo02" src="/images/img_library03.jpg" alt="library">
+                <div class="partie02_biblio">
+                    <div class="img02_biblio">
+                    <img class="photo02_biblio" src="/images/img_library03.jpg" alt="library">
                     </div>
                     <div class="para_biblio02">
-                    <h3>Le Bâtiment rénové</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maiores similique quam. Explicabo, voluptatibus deserunt distinctio est, nemo eum nisi minus sapiente quis quas ea incidunt odio aut, aspernatur doloremque.
+                    <h3 class="h3_biblio">Le Bâtiment rénové</h3>
+                    <p class="p_biblio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maiores similique quam. Explicabo, voluptatibus deserunt distinctio est, nemo eum nisi minus sapiente quis quas ea incidunt odio aut, aspernatur doloremque.
                     Error nobis et modi voluptates rem minima asperiores similique vel dicta ratione delectus iste quas, veniam nam vero mollitia incidunt perspiciatis fugit doloribus totam ut consequatur tempore cumque cum! Beatae!
                     Maiores qui nesciunt sapiente non provident iusto, incidunt numquam cum ad nisi tempore doloremque voluptates in sequi sunt nihil esse dicta alias voluptatem? Reprehenderit, at. Minus sapiente eius maxime voluptatum.
                     Fugit, laborum fugiat delectus, esse quae accusantium exercitationem earum quo vero recusandae beatae, necessitatibus incidunt ipsum expedita ducimus enim facilis ab? Eligendi odio laborum soluta architecto maxime magni facilis. Ratione.
@@ -61,9 +41,3 @@ $page = 'bibliotheque';
             </section>
         </div>  
     </main>
-    
-    <?php
-    include '../pages/footer.php';
-    ?>
-</body>
-</html>

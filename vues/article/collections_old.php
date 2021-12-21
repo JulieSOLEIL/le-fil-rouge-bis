@@ -2,7 +2,7 @@
 session_start();
 require '../base/dao.php';
 
-$page = 'collections';
+$vue = 'collections';
 // $collection = filter_input(INPUT_GET, 'collection', FILTER_SANITIZE_STRING);
 
 ?>
@@ -21,7 +21,7 @@ $page = 'collections';
 
 <body>
     <?php
-    include '../pages/header.php';
+    require '../vues/header.php';
     ?>
 
     <main class="contenu">
@@ -70,7 +70,7 @@ $page = 'collections';
          
 
     <?php
-    include '../pages/footer.php';
+    include '../vues/footer.php';
     ?>
 </body>
 

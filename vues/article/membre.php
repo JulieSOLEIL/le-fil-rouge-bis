@@ -1,5 +1,6 @@
 <?php
 session_start();
+$vue = 'membre';
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@ session_start();
 </head>
 <body>
     <?php
-    include '../pages/header.php';
+    require '../vues/header.php';
     ?>
 <main>  
     <section class="info">
@@ -46,7 +47,7 @@ session_start();
 </main> 
 
 <?php
-include '../pages/footer.php';
+include '../vues/footer.php';
 ?>
 
 </body>
