@@ -33,6 +33,7 @@ i{
 /***********************NAVBAR ***************************/
 nav{
     overflow: hidden;
+    text-transform: capitalize;
     background-color: #002244;
     position: fixed;
     top: 0;
@@ -115,6 +116,10 @@ ul li ul li {
 }
 .drop:hover .sous {
     display: block;
+}
+.date_du_jour{
+    color: antiquewhite;
+    padding: 33px 16px;
 }
 
 /**************SEARCH BAR****************/

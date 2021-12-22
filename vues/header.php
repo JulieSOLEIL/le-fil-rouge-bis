@@ -1,9 +1,11 @@
 <?php
-session_start();
+// session_start();
 if (isset($_SESSION['nom_user'])) {
     $identifiant = $_SESSION['nom_user'];
+    $categorie = $_SESSION['categorie_user'];
 } else {
     $identifiant = '';
+    $categorie = '';
 }
 ?>
 <header>
@@ -15,16 +17,25 @@ if (isset($_SESSION['nom_user'])) {
             <?php
             if ($identifiant === '') {
                 echo '<li class="nav-txt"><a href="index.php?entite=user&action=login">Connexion <i class="fas fa-user-circle"></a></i></li>';
+            } elseif ($categorie === 'admin') {
+                echo '<li class="drop"><a>Bonjour ' . $identifiant . ' <i class="fas fa-user-circle"></i> '.'<br>'.'(' . $categorie . ')' . '</a>
+                    <ul class="sous">
+                    <li><a class="option1" href="#">Gestion des ouvrages</a></li>
+                    <li><a class="option1" href="#">Gestion des membres</a></li>
+                    <li><a class="option2" href="index.php?entite=user&action=deconnect">Déconnexion</a></li>
+                    </ul>
+                    <li class="nav-txt"><a href="index.php?entite=wishList&action=monPanier">Mon panier <i class="fas fa-shopping-basket"></a></i></li>
+                     </li>';
             } else {
-                echo '<li class="drop"><a>Bonjour ' . $identifiant . ' <i class="fas fa-user-circle"></a></i>';
-                echo '<ul class="sous">';
-                echo '<li><a class="option1" href="#">Tableau de bord</a></li>';
-                echo '<li><a class="option2" href="index.php?entite=user&action=deconnect">Déconnexion</a></li>';
-                echo '</ul></li>';
+                echo '<li class="drop"><a>Bonjour ' . $identifiant . ' <i class="fas fa-user-circle"></i> '.'<br>'.'(' . $categorie . ')' . '</a>
+                    <ul class="sous">
+                    <li><a class="option1" href="#">Tableau de bord</a></li>
+                    <li><a class="option2" href="index.php?entite=user&action=deconnect">Déconnexion</a></li>
+                    </ul>
+                    <li class="nav-txt"><a href="index.php?entite=wishList&action=monPanier">Mon panier <i class="fas fa-shopping-basket"></a></i></li>
+                     </li>';
             }
             ?>
-
-            <li class="nav-txt"><a href="#">Mon panier <i class="fas fa-shopping-basket"></a></i></li>
             <li class="dropdown"><a>Infos Pratiques <i class="fa fa-caret-down"></i></a>
                 <ul class="sous">
                     <li><a class="sousTxt" href="index.php?entite=article&action=trouver">Où nous trouver</a></li>
@@ -35,7 +46,6 @@ if (isset($_SESSION['nom_user'])) {
             <li class="nav-txt"><a href="index.php?entite=article&action=collections">Nos Collections</a>
             </li>
             <li class="nav-txt"><a href="index.php?entite=article&action=biblio">La Bibliothèque</a></li>
-            <span class="badge badge-secondary">DATE : <?php echo date('d.m.Y') ?></span>
         </ul>
     </nav>
     <!-- <div id="searchBar">

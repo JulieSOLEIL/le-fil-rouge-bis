@@ -34,11 +34,11 @@ switch ($action) {
                 $vue = 'accueil';
             } catch (Exception $err) {
                 $erreur = $err->getMessage();
-                $vue = 'user/creerCompte';
+                $vue = 'libraire/formAddUser';
             }
         } else {
             $erreur = '';
-            $vue = 'user/creerCompte';
+            $vue = 'libraire/formAddUser';
         }
         break;
 

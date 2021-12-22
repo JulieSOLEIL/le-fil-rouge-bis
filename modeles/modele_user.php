@@ -1,12 +1,9 @@
 <?php
-session_start();
+// session_start();
 require 'base/dao.php';
 
 function login()
 {
-
-    // global $vue;
-    // global $erreur;
     global $login;
 
     $methode = $_SERVER['REQUEST_METHOD'];
@@ -63,8 +60,10 @@ function enregUser()
         'email_user' => filter_input(INPUT_POST, 'email_user', FILTER_SANITIZE_SPECIAL_CHARS),
         'psw_user' => filter_input(INPUT_POST, 'psw_user', FILTER_SANITIZE_SPECIAL_CHARS),
         'tel_user' => filter_input(INPUT_POST, 'tel_user', FILTER_SANITIZE_SPECIAL_CHARS),
-        'categorie_user' => 'client',
+        'categorie_user' => filter_input(INPUT_POST, 'categorie_user', FILTER_SANITIZE_SPECIAL_CHARS),
+        'type_membre' => filter_input(INPUT_POST, 'type_membre', FILTER_SANITIZE_SPECIAL_CHARS),
         'pseudo' => filter_input(INPUT_POST, 'pseudo', FILTER_SANITIZE_EMAIL),
+        'creation_compte' => filter_input(INPUT_POST, 'creation_compte', FILTER_SANITIZE_SPECIAL_CHARS),
     ];
 
     setNewUser($client);

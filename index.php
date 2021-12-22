@@ -1,5 +1,5 @@
 <?php
-    // session_start();
+    session_start();
     if (isset($_GET['entite'])){
         $entite = $_GET['entite'];
         $action = $_GET['action'];

@@ -1,18 +1,21 @@
 /***********Mise en Page ***************/
-main{
+.main_condition{
     margin-top: 130px;
 }
-.contenu{
+.contenu_condition{
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
     align-content: space-around;
     margin: 60px;
 }
-h3{
+.h2_condition {
+    margin-bottom: 100px;
+}
+.h3_condition{
     text-align: left;
     margin-left: 80px;
 }
-p{
+.p_condition{
     text-align: justify;
 }
