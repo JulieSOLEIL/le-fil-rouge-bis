@@ -38,6 +38,7 @@ nav{
     position: fixed;
     top: 0;
     width: 100%;
+    height: 100px;
     opacity: 0.9;
     z-index: 5;
 }
@@ -48,6 +49,7 @@ nav{
 }
 .nav-txt{
     padding-top: 12px;
+    height: 100px;
 }
 .dropdown{
     margin-top: 12px;
@@ -69,7 +71,7 @@ header li a{
     padding: 18px 16px;
 }
 .navbar .nav-txt a:hover, .deroulant:hover {
-    background-color: rgb(199, 214, 219);
+    background-color: rgb(199, 214, 219); 
     color: #002244;
     transition: 0.3s ;
 }

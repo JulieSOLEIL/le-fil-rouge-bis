@@ -18,7 +18,7 @@ if (isset($_SESSION['nom_user'])) {
             if ($identifiant === '') {
                 echo '<li class="nav-txt"><a href="index.php?entite=user&action=login">Connexion <i class="fas fa-user-circle"></a></i></li>';
             } elseif ($categorie === 'admin') {
-                echo '<li class="drop"><a>Bonjour ' . $identifiant . ' <i class="fas fa-user-circle"></i> '.'<br>'.'(' . $categorie . ')' . '</a>
+                echo '<li class="drop"><a>Bonjour ' . $identifiant . ' <i class="fas fa-user-circle"></i> ' . '<br>' . '(' . $categorie . ')' . '</a>
                     <ul class="sous">
                     <li><a class="option1" href="#">Gestion des ouvrages</a></li>
                     <li><a class="option1" href="#">Gestion des membres</a></li>
@@ -27,7 +27,7 @@ if (isset($_SESSION['nom_user'])) {
                     <li class="nav-txt"><a href="index.php?entite=wishList&action=monPanier">Mon panier <i class="fas fa-shopping-basket"></a></i></li>
                      </li>';
             } else {
-                echo '<li class="drop"><a>Bonjour ' . $identifiant . ' <i class="fas fa-user-circle"></i> '.'<br>'.'(' . $categorie . ')' . '</a>
+                echo '<li class="drop"><a>Bonjour ' . $identifiant . ' <i class="fas fa-user-circle"></i> ' . '<br>' . '(' . $categorie . ')' . '</a>
                     <ul class="sous">
                     <li><a class="option1" href="#">Tableau de bord</a></li>
                     <li><a class="option2" href="index.php?entite=user&action=deconnect">Déconnexion</a></li>
