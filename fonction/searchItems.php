@@ -1,6 +1,6 @@
 <?php
-session_start();
-require_once '../base/dao.php';
+// session_start();
+// require_once '../base/dao.php';
 
 $dbConnect = mysqli_connect($dsn,$userName,$password);
 $sql = "SELECT * FROM collection WHERE nom_collection LIKE '%".$_POST['name']."%'";

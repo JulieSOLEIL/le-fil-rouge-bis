@@ -1,49 +1,25 @@
-<?php
-session_start();
-require '../base/dao.php';
-
-$page = 'collections';
-// $collection = filter_input(INPUT_GET, 'collection', FILTER_SANITIZE_STRING);
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliothèque de L'Inconnu</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/collections.css">
-    <script src="https://kit.fontawesome.com/c19fce56fe.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <?php
-    include '../pages/header.php';
-    ?>
-
-    <main class="contenu">
-        <div class="titre">
+    <main class="contenu_collection">
+        <div class="titre_collection">
             <h1>Recherche d'ouvrages</h1>
         </div>
-        <section class="contenant">
-            <div class="cube">
+        <section class="contenant_collection">
+            <div class="cube_collection">
                 <label>Par Collections</label>
                 <input type="text" name="collection" id="collection" placeholder="Entrez les mots-clés">
             </div>
-            <div id="result-search"></div>
+            <div></div>
 
-            <div class="cube">
+            <div class="cube_collection">
                 <label>Par Thèmes</label>
                 <input type="text" name="theme" placeholder="Entrez les mots-clés">
             </div>
 
-            <div class="cube">
+            <div class="cube_collection">
                 <label>Par Auteurs</label>
                 <input type="text" name="auteur" placeholder="Entrez les mots-clés">
             </div>
-            <button type="submit">Rechercher</button>
+            <button type="submit" id="result-search">Rechercher</button>
+            <div id="output"></div>
             </section>
             <!-- <section class="contenant">
             <div class="cube">
@@ -83,31 +59,9 @@ $page = 'collections';
                 <option value="oeuvres">Oeuvres et Thèmes</option>
             </select>
             </div>
-            <div class="cube">
-                <label>par auteur</label>
-                <select name="auteur" id="auteur" size="2" multiple>
-                    <option value="acissi">ACISSI</option>
-                    <option value="Andre">André </option>
-                </select>
-            </div>
-            <div class="cube">
-                <label>par thème</label>
-                <select name="theme" id="theme">
-                    <option value=""></option>
-                </select>
-            </div>
-            <div class="cube">
-                <button><a href="#"> Voir tout</button>
-            </div>
 
         </section> -->
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/js/collection.js"></script>
-    <?php
-    include '../pages/footer.php';
-    ?>
-</body>
-
-</html>
+    <script src="../js/collection.js"></script>

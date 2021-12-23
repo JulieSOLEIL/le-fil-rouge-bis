@@ -1,5 +1,6 @@
 /********PARTIE INFO**********/
-main{
+.main_membre{
+    margin-top: 120px;
     padding: 60px;
     box-sizing: border-box;
     display: flex;
@@ -7,15 +8,15 @@ main{
     justify-content: center;
     align-items: center;
 }
-main h3{
+.h3_membre{
     font-size: 25px;
     line-height: 1.5em;
 }
-.image img{
+.image_membre img{
     width: 400px;
     margin-top: 180px;
 }
-.info{
+section.info_membre{
     padding: 50px;
     margin-bottom: 80px;
     display: flex;
@@ -26,7 +27,7 @@ main h3{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-radius: 10px;
 }
-.info p{
+p.p_membre{
     text-align: justify;
-    margin: 10px 20px;
+    margin: 120px 20px;
 }

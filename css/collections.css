@@ -1,7 +1,7 @@
-.contenu{
-    margin: 0 600px 100px 600px; 
+.contenu_collection{
+    margin: 150px 600px 131px 600px; 
 }
-.contenant{
+.contenant_collection{
     /* display: block; */
 display: flex;
 flex-flow: wrap column;
@@ -14,7 +14,7 @@ background-color: lightcyan;
 padding: 30px;
 margin: 30px;
 }
-.cube {
+.cube_collection {
     /* display: flex;
     flex-wrap: wrap;
     justify-content: space-around; */
@@ -22,23 +22,24 @@ margin: 30px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     background-color: lightcyan;
     border-radius: 10px; */
+    font-weight: 700;
     width: 90%;
     font-size: 22px;
     margin: 20px;
     padding-top: 10px 0;
     padding-bottom: 30px;
 }
-button a {
+button#result-search {
     font-weight: bold;
     color: black;
     font-size: 18px;
     letter-spacing: 1px;
 }
-button a:hover{
+button#result-search:hover{
     background: antiquewhite;
     color: orangered;
 }
-button{
+button#result-search{
     padding: 10px;
     background-color: antiquewhite;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -47,13 +48,13 @@ button{
     transition: all 0.3s ease;
     padding: 15px;
 }
-button:hover{
+button#result-search:hover{
     transform: scale(0.99);
     background: antiquewhite;
     color: orangered;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-.contenant input{
+.contenant_collection input{
     text-align: left;
     outline: none;
     border-radius: 5px;
@@ -65,7 +66,7 @@ button:hover{
     transition: all 0.3s ease; 
 }
 /* quand on clique sur input, un border se cree */
-.contenant input:hover{
+.contenant_collection input:hover{
     border-color: #002244;
 }
 /*.cube a{
@@ -76,37 +77,37 @@ button:hover{
 } */
 /***************MEDIA QUERIES******************/
 @media screen and (max-width: 1855px) {
-    .contenu{
+    .contenu_collection{
         margin: 0 500px 100px 500px; 
     }
 }
 @media screen and (max-width: 1680px) {
-    .contenu{
+    .contenu_collection{
         margin: 0 400px 100px 400px; 
     }
 }
 @media screen and (max-width: 1550px) {
-    .contenu{
+    .contenu_collection{
         margin: 0 400px 100px 300px; 
     }
 }
 @media screen and (max-width: 1360px) {
-    .contenu{
+    .contenu_collection{
         margin: 0 200px 100px 200px; 
     }
 }
 @media screen and (max-width: 1060px) {
-    .contenu{
+    .contenu_collection{
         margin: 0 100px 100px 100px; 
     }
 }
 @media screen and (max-width: 691px) {
-    .contenu{
+    .contenu_collection{
         margin: 0 80px 100px 80px; 
     }
 }
 @media screen and (max-width: 591px) {
-    .contenu{
+    .contenu_collection{
         margin: 0 60px 100px 60px; 
     }
 }

@@ -1,28 +1,8 @@
-<?php
-session_start();
-$page = 'conditions';
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliothèque de L'Inconnu</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/conditions.css">
-    <script src="https://kit.fontawesome.com/c19fce56fe.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <?php
-    include '../pages/header.php';
-    ?>
-
-    <main>
-        <div class="contenu">
-            <h2>Nos conditions generales</h2>
-            <h3>1. Les regles pour adherer:</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quam itaque sint tempora reiciendis earum obcaecati laborum explicabo corrupti neque inventore, autem dolor a quos dolorem sed suscipit quisquam ratione.
+    <main class="main_condition">
+        <div class="contenu_condition">
+            <h2 class="h2_condition">Nos conditions générales</h2>
+            <h3 class="h3_condition">1. Les règles pour adhérer:</h3>
+            <p class="p_condition">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quam itaque sint tempora reiciendis earum obcaecati laborum explicabo corrupti neque inventore, autem dolor a quos dolorem sed suscipit quisquam ratione.
             Quisquam atque laborum neque. Voluptatum iusto incidunt expedita numquam quam dolore porro alias, delectus dolor id architecto? Similique voluptas, culpa, dolor cum ad, magnam ullam et assumenda autem saepe qui.
             Possimus libero enim facere sed ab ea ratione quis non nulla molestiae sit, earum corrupti! Ipsam obcaecati commodi, et modi voluptates impedit. Suscipit hic maiores consequatur quasi neque ipsam ratione!
             Repellat sequi mollitia debitis assumenda deserunt quos officiis dolorum earum eveniet voluptate sit vel ut consequuntur quia, dignissimos dicta id harum, minus, saepe totam fuga cupiditate officia quibusdam! Eaque, quidem.
@@ -52,8 +32,8 @@ $page = 'conditions';
             Asperiores impedit voluptatem iure perspiciatis, maxime praesentium! Fugiat maiores, accusantium ratione quaerat saepe asperiores. Quaerat quasi enim, ut facilis nihil a cupiditate voluptas quos quo distinctio ipsam nobis corporis at!
             Voluptas accusantium eum reiciendis, aperiam maiores fuga et voluptate quos. Sunt libero eaque voluptatibus pariatur reiciendis delectus architecto rerum, consequatur praesentium dolorum eum voluptatum optio minima itaque, debitis amet alias?
             Maiores pariatur numquam repudiandae tempore ab aut in similique at alias quo sint iure nobis adipisci velit possimus, porro commodi harum, fuga fugiat reiciendis? Est provident repellat qui aliquam sapiente.</p>
-            <h3>2. Les droits d'emprunts:</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quam itaque sint tempora reiciendis earum obcaecati laborum explicabo corrupti neque inventore, autem dolor a quos dolorem sed suscipit quisquam ratione.
+            <h3 class="h3_condition">2. Les droits d'emprunts:</h3>
+            <p class="p_condition">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quam itaque sint tempora reiciendis earum obcaecati laborum explicabo corrupti neque inventore, autem dolor a quos dolorem sed suscipit quisquam ratione.
             Quisquam atque laborum neque. Voluptatum iusto incidunt expedita numquam quam dolore porro alias, delectus dolor id architecto? Similique voluptas, culpa, dolor cum ad, magnam ullam et assumenda autem saepe qui.
             Possimus libero enim facere sed ab ea ratione quis non nulla molestiae sit, earum corrupti! Ipsam obcaecati commodi, et modi voluptates impedit. Suscipit hic maiores consequatur quasi neque ipsam ratione!
             Repellat sequi mollitia debitis assumenda deserunt quos officiis dolorum earum eveniet voluptate sit vel ut consequuntur quia, dignissimos dicta id harum, minus, saepe totam fuga cupiditate officia quibusdam! Eaque, quidem.
@@ -83,8 +63,8 @@ $page = 'conditions';
             Asperiores impedit voluptatem iure perspiciatis, maxime praesentium! Fugiat maiores, accusantium ratione quaerat saepe asperiores. Quaerat quasi enim, ut facilis nihil a cupiditate voluptas quos quo distinctio ipsam nobis corporis at!
             Voluptas accusantium eum reiciendis, aperiam maiores fuga et voluptate quos. Sunt libero eaque voluptatibus pariatur reiciendis delectus architecto rerum, consequatur praesentium dolorum eum voluptatum optio minima itaque, debitis amet alias?
             Maiores pariatur numquam repudiandae tempore ab aut in similique at alias quo sint iure nobis adipisci velit possimus, porro commodi harum, fuga fugiat reiciendis? Est provident repellat qui aliquam sapiente.</p>
-            <h3>1. Conditions pour venir étudier dans la bibliothèque :</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quam itaque sint tempora reiciendis earum obcaecati laborum explicabo corrupti neque inventore, autem dolor a quos dolorem sed suscipit quisquam ratione.
+            <h3 class="h3_condition">1. Conditions pour venir étudier dans la bibliothèque :</h3>
+            <p class="p_condition">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quam itaque sint tempora reiciendis earum obcaecati laborum explicabo corrupti neque inventore, autem dolor a quos dolorem sed suscipit quisquam ratione.
             Quisquam atque laborum neque. Voluptatum iusto incidunt expedita numquam quam dolore porro alias, delectus dolor id architecto? Similique voluptas, culpa, dolor cum ad, magnam ullam et assumenda autem saepe qui.
             Possimus libero enim facere sed ab ea ratione quis non nulla molestiae sit, earum corrupti! Ipsam obcaecati commodi, et modi voluptates impedit. Suscipit hic maiores consequatur quasi neque ipsam ratione!
             Repellat sequi mollitia debitis assumenda deserunt quos officiis dolorum earum eveniet voluptate sit vel ut consequuntur quia, dignissimos dicta id harum, minus, saepe totam fuga cupiditate officia quibusdam! Eaque, quidem.
@@ -116,10 +96,3 @@ $page = 'conditions';
             Maiores pariatur numquam repudiandae tempore ab aut in similique at alias quo sint iure nobis adipisci velit possimus, porro commodi harum, fuga fugiat reiciendis? Est provident repellat qui aliquam sapiente.</p>
         </div>
     </main>
-
-
-    <?php
-    include '../pages/footer.php';
-    ?>
-</body>
-</html>

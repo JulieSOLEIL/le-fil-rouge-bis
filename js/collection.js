@@ -1,13 +1,13 @@
-$(document).ready(function () {
-    $('#collection').keypress(function(){
+$(document).ready(function() {
+    $('#result-search').click(function(){
         $.ajax({
             type:'POST',
-            url:'searchItems.php',
+            url:'/fonction/searchItems.php',
             data:{
-                name:$('#collection').val(),
+                collection:$('#collection').val(),
             },
             success:function(data){
-                $("#result-search").html(data);
+                $("#output").html(data);
             }
         });
     });
