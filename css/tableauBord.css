@@ -1,0 +1,60 @@
+/**************PARTIE GENERALE*****************/
+.tableau_p1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+.tableau_p2 a {
+    color: black;
+    font-weight: 500;
+}
+.tableau_p2 a:hover {
+    
+    color: orangered;
+    font-weight: 900;
+    transition: 0.3s;
+}
+#tableauBord {
+
+    gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+/**************PARTIE GAUCHE*****************/
+.left_column_general {
+
+    margin: 150px 0 150px 20px;
+    width: 15%;
+    border: 2px lightcyan solid ;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: lightcyan;
+    padding: 20px;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+/**************PARTIE DROITE*****************/
+.right_column_general {
+
+    margin: 150px 20px 150px 0;
+    width: 73%;
+    height: 600px;
+    border: 2px lightcyan solid ;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: lightcyan;
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+/*********TITRE PARTIE DROITE**************/
+.right_column_h3{
+
+    font-size: 25px;
+}

@@ -22,7 +22,7 @@ function login()
             if (password_verify($psw, $user['psw_user'])) {
                 // si connecter alors mémoriser en session le login et ...
 
-                $_SESSION['nom_user'] = $user['nom_user'];
+                $_SESSION['prenom_user'] = $user['prenom_user'];
                 $_SESSION['categorie_user'] = $user['categorie_user'];
                 // $vue = 'accueil';
 
@@ -67,6 +67,6 @@ function enregUser()
     ];
 
     setNewUser($client);
-    $_SESSION['nom_user'] = $client['nom_user'];
+    $_SESSION['prenom_user'] = $client['prenom_user'];
     $_SESSION['categorie_user'] = $client['categorie_user'];
 }
