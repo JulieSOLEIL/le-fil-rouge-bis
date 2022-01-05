@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/membre.css">
     <link rel="stylesheet" href="/css/trouver.css">
     <link rel="stylesheet" href="/css/connexion.css">
+    <link rel="stylesheet" href="/css/tableauBord.css">
     <script src="https://kit.fontawesome.com/c19fce56fe.js" crossorigin="anonymous"></script>
 </head>
 <body>

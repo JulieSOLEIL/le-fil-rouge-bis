@@ -17,7 +17,6 @@
 
         case 'article':
             require 'controleurs/controleur_article.php';
-
             break;
         
         default:

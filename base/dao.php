@@ -66,6 +66,14 @@ function setNewUser($user)
         throw new Exception('Login déjà existant !');
     }
 }
+function getDonneesPersos ($user) {
+
+    $refPdo = connexion();
+
+    $sql = 'SELECT * FROM users';
+
+
+}
 
 
 // function addOuvrage($isbn_ouvrage, $photo, $titre_ouvrage, $date_parution, $dispo, $id_auteur, $id_collection, $id_editeur) {

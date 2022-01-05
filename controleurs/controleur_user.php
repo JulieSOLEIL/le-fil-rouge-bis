@@ -26,6 +26,14 @@ switch ($action) {
         logout();
         break;
 
+    case 'tableauBord':
+        $vue = 'client/tableauBord';
+        break;
+
+    case 'donneesPerso':
+        $vue = 'client/tableauBord';
+        break;
+
     case 'newCompte':
         $methode = $_SERVER['REQUEST_METHOD'];
         if ($methode === 'POST') {

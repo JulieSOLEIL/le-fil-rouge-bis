@@ -1,7 +1,7 @@
 <?php
 // session_start();
-if (isset($_SESSION['nom_user'])) {
-    $identifiant = $_SESSION['nom_user'];
+if (isset($_SESSION['prenom_user'])) {
+    $identifiant = $_SESSION['prenom_user'];
     $categorie = $_SESSION['categorie_user'];
 } else {
     $identifiant = '';
@@ -20,8 +20,8 @@ if (isset($_SESSION['nom_user'])) {
             } elseif ($categorie === 'admin') {
                 echo '<li class="drop"><a>Bonjour ' . $identifiant . ' <i class="fas fa-user-circle"></i> ' . '<br>' . '(' . $categorie . ')' . '</a>
                     <ul class="sous">
-                    <li><a class="option1" href="#">Gestion des ouvrages</a></li>
-                    <li><a class="option1" href="#">Gestion des membres</a></li>
+                    <li><a class="option1" href="#">Gestion ouvrages</a></li>
+                    <li><a class="option1" href="#">Gestion membres</a></li>
                     <li><a class="option2" href="index.php?entite=user&action=deconnect">Déconnexion</a></li>
                     </ul>
                     <li class="nav-txt"><a href="index.php?entite=wishList&action=monPanier">Mon panier <i class="fas fa-shopping-basket"></a></i></li>
@@ -29,7 +29,7 @@ if (isset($_SESSION['nom_user'])) {
             } else {
                 echo '<li class="drop"><a>Bonjour ' . $identifiant . ' <i class="fas fa-user-circle"></i> ' . '<br>' . '(' . $categorie . ')' . '</a>
                     <ul class="sous">
-                    <li><a class="option1" href="#">Tableau de bord</a></li>
+                    <li><a class="option1" href="index.php?entite=user&action=tableauBord">Tableau de bord</a></li>
                     <li><a class="option2" href="index.php?entite=user&action=deconnect">Déconnexion</a></li>
                     </ul>
                     <li class="nav-txt"><a href="index.php?entite=wishList&action=monPanier">Mon panier <i class="fas fa-shopping-basket"></a></i></li>
