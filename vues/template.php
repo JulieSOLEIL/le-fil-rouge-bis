@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="/css/trouver.css">
     <link rel="stylesheet" href="/css/connexion.css">
     <link rel="stylesheet" href="/css/tableauBord.css">
+    <link rel="stylesheet" href="/css/gestionMembre.css">
+    <link rel="stylesheet" href="/css/formAddUser.css">
     <script src="https://kit.fontawesome.com/c19fce56fe.js" crossorigin="anonymous"></script>
 </head>
 <body>

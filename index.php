@@ -4,8 +4,8 @@
         $entite = $_GET['entite'];
         $action = $_GET['action'];
     } else {
-        $entite = 'geiufvhvtbtt';
-        $action = 'afuhovibriug';
+        $entite = '';
+        $action = '';
     }
     $vue = '';
 
@@ -13,6 +13,10 @@
     switch ($entite) {
         case 'user':
             require 'controleurs/controleur_user.php';
+            break;
+
+        case 'admin':
+            require 'controleurs/controleur_admin.php';
             break;
 
         case 'article':

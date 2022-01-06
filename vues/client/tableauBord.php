@@ -21,7 +21,7 @@ if (isset($_SESSION['prenom_user'])) {
     <section class="right_column_general">
         <?php
         if ($identifiant === $_SESSION['prenom_user']) {
-            echo '<h3 class ="right_column_h3"> Bienvenue '. $identifiant .'.<br><br> Vous pouvez consulter vos informations personelles, ainsi que les différents livres en cours de prêt et aussi votre historique d\'emprunts.</h3>';
+            echo '<h3 class ="right_column_h3"> Bienvenue '. $identifiant .'.<br><br> Le tableau de bord permet de consulter vos informations personelles,<br> ainsi que les différents livres en cours de prêt et aussi votre historique d\'emprunts.</h3>';
         } elseif ($donneesPerso === '') {
            
         }

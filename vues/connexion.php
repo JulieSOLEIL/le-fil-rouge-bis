@@ -14,7 +14,7 @@
                     <label class="label_connex" for="idForm">Identifiant:</label>
                 </div>
                 <div class="col-75">
-                    <input class="input_connex" type="text" id="idForm" name="identifiant" placeholder="Entrez votre pseudonyme...">
+                    <input class="input_connex" type="text" id="idForm" name="email_user" placeholder="Entrez votre email...">
                 </div>
             </div>
             <div class="row_connex">
