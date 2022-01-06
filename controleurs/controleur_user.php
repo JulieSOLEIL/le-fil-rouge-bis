@@ -34,21 +34,21 @@ switch ($action) {
         $vue = 'client/tableauBord';
         break;
 
-    case 'newCompte':
-        $methode = $_SERVER['REQUEST_METHOD'];
-        if ($methode === 'POST') {
-            try {
-                enregUser();
-                $vue = 'accueil';
-            } catch (Exception $err) {
-                $erreur = $err->getMessage();
-                $vue = 'libraire/formAddUser';
-            }
-        } else {
-            $erreur = '';
-            $vue = 'libraire/formAddUser';
-        }
-        break;
+    // case 'newCompte':
+    //     $methode = $_SERVER['REQUEST_METHOD'];
+    //     if ($methode === 'POST') {
+    //         try {
+    //             enregUser();
+    //             $vue = 'accueil';
+    //         } catch (Exception $err) {
+    //             $erreur = $err->getMessage();
+    //             $vue = 'admin/formAddUser';
+    //         }
+    //     } else {
+    //         $erreur = '';
+    //         $vue = 'admin/formAddUser';
+    //     }
+    //     break;
 
     default:
         # code...

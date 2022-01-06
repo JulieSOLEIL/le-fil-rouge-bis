@@ -1,0 +1,70 @@
+/******GENERAL***********/
+.gm_contenant{
+    margin-top: 150px;
+    border: 2px lightcyan solid ;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: lightcyan;
+    padding: 20px;
+}
+/******TEXTES*********/
+.gm_h3 {
+    font-size: 30px;
+    font-weight: 900;
+}
+.gm_span{
+    color: orangered;
+}
+.gm_p {
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
+/*******Boutons************/
+.gm_Membre a{
+    margin: 15px;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    background-color: antiquewhite;
+    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.gm_Membre a:hover {
+        transform: scale(0.99);
+        background: antiquewhite;
+        color: orangered;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+}
+/*********les boutons*************/
+.gm_box{
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* SUCCESS PART */
+.fau_success {
+    margin-top: 130px;
+    margin-bottom: -100px;
+}
+.fau_h3_success {
+    font-size: 18px;
+    font-weight: 800;
+    color: green;
+}
+.fau_p_success {
+    font-size: 15px;
+    font-weight: 500;
+}
+.fau_p_success a{
+    color: black;
+    font-weight: 600;
+}
+.fau_p_success a:hover {
+    color: orangered;
+}

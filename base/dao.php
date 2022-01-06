@@ -30,7 +30,7 @@ function getUserByLogin($log)
 
     $refPdo = connexion();
 
-    $sql = 'SELECT * FROM users WHERE pseudo =:identifiant';
+    $sql = 'SELECT * FROM users WHERE email_user =:identifiant';
     $stat_user = $refPdo->prepare($sql);
     $stat_user->bindParam(':identifiant', $log, PDO::PARAM_STR);
     $stat_user->execute();
@@ -46,7 +46,7 @@ function setNewUser($user)
 {
     $refPdo = connexion();
 
-    $sql = 'INSERT INTO users VALUES (null, :nom_user, :prenom_user, :adresse_user, :email_user, :psw_user, :tel_user, :categorie_user, :type_membre, :pseudo, :creation_compte);';
+    $sql = 'INSERT INTO users VALUES (null, :nom_user, :prenom_user, :adresse_user, :email_user, :psw_user, :tel_user, :categorie_user, :type_membre, :creation_compte);';
     $stat_user = $refPdo->prepare($sql);
 
     $stat_user->bindParam(':nom_user', $user['nom_user'], PDO::PARAM_STR);
@@ -58,7 +58,7 @@ function setNewUser($user)
     $stat_user->bindParam(':tel_user', $user['tel_user'], PDO::PARAM_STR);
     $stat_user->bindParam(':categorie_user', $user['categorie_user'], PDO::PARAM_STR);
     $stat_user->bindParam(':type_membre', $user['type_membre'], PDO::PARAM_STR);
-    $stat_user->bindParam(':pseudo', $user['pseudo'], PDO::PARAM_STR);
+    // $stat_user->bindParam(':pseudo', $user['pseudo'], PDO::PARAM_STR);
     $stat_user->bindParam(':creation_compte', $user['creation_compte'], PDO::PARAM_STR);
     try {
         $stat_user->execute();

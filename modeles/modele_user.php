@@ -9,7 +9,7 @@ function login()
     $methode = $_SERVER['REQUEST_METHOD'];
     if ($methode === 'POST') {
 
-        $login = filter_input(INPUT_POST, 'identifiant', FILTER_SANITIZE_SPECIAL_CHARS);
+        $login = filter_input(INPUT_POST, 'email_user', FILTER_SANITIZE_SPECIAL_CHARS);
         $psw = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
 
 
@@ -62,11 +62,10 @@ function enregUser()
         'tel_user' => filter_input(INPUT_POST, 'tel_user', FILTER_SANITIZE_SPECIAL_CHARS),
         'categorie_user' => filter_input(INPUT_POST, 'categorie_user', FILTER_SANITIZE_SPECIAL_CHARS),
         'type_membre' => filter_input(INPUT_POST, 'type_membre', FILTER_SANITIZE_SPECIAL_CHARS),
-        'pseudo' => filter_input(INPUT_POST, 'pseudo', FILTER_SANITIZE_EMAIL),
         'creation_compte' => filter_input(INPUT_POST, 'creation_compte', FILTER_SANITIZE_SPECIAL_CHARS),
     ];
 
     setNewUser($client);
-    $_SESSION['prenom_user'] = $client['prenom_user'];
-    $_SESSION['categorie_user'] = $client['categorie_user'];
+    // $_SESSION['prenom_user'] = $client['prenom_user'];
+    // $_SESSION['categorie_user'] = $client['categorie_user'];
 }
