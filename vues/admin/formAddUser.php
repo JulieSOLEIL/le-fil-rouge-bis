@@ -1,4 +1,3 @@
-
 <section id="fau_main">
     <div class="fau_dateJour">
         <li class="date_du_jour">Date du jour <span>[</span><?php echo date('d.m.Y') ?><span>]</span></li>
@@ -43,4 +42,7 @@
             <button class="fau_button" type="submit">Valider</button>
         </div>
     </form>
+
+    <div class="gm_Membre"><a href="#">Modifier Membre</a></div> <br>
+    <div class="gm_Membre"><a href="#">Supprimer Membre</a></div> <br>
 </section>

@@ -54,6 +54,8 @@ function enregUser()
 {
 
     $client = [
+        
+        'custom_id' => filter_input(INPUT_POST, 'custom_id', FILTER_SANITIZE_SPECIAL_CHARS),
         'nom_user' => filter_input(INPUT_POST, 'nom_user', FILTER_SANITIZE_SPECIAL_CHARS),
         'prenom_user' => filter_input(INPUT_POST, 'prenom_user', FILTER_SANITIZE_SPECIAL_CHARS),
         'adresse_user' => filter_input(INPUT_POST, 'adresse_user', FILTER_SANITIZE_SPECIAL_CHARS),
