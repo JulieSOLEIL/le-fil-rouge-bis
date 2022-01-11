@@ -1,7 +1,3 @@
-<?php
-
-
-?>
 <section id="fau_main">
     <div class="fau_dateJour">
         <li class="date_du_jour">Date du jour <span>[</span><?php echo date('d.m.Y') ?><span>]</span></li>

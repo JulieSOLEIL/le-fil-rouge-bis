@@ -1,10 +1,11 @@
 <?php
 // session_start();
-require 'base/dao.php';
 
 function login()
 {
     global $login;
+    require 'base/dao.php';
+
 
     $methode = $_SERVER['REQUEST_METHOD'];
     if ($methode === 'POST') {
@@ -18,23 +19,14 @@ function login()
 
         if ($user) {
             // comparer le $psw avec le mot de passe de la base de données
-
             if (password_verify($psw, $user['psw_user'])) {
                 // si connecter alors mémoriser en session le login et ...
-
                 $_SESSION['prenom_user'] = $user['prenom_user'];
                 $_SESSION['categorie_user'] = $user['categorie_user'];
-                // $vue = 'accueil';
-
             } else {    // mot de passe incorrect
-                // $erreur = 'Mot de passe erroné !';
-                // $vue ='connexion';
                 throw new Exception('Mot de passe erroné !');
             }
         } else {    // login non trouvé en base
-            // $erreur = 'Login erroné !';
-            // $login = '';
-            // $vue ='connexion';
             throw new Exception('Login erroné !');
         }
     }
@@ -42,7 +34,7 @@ function login()
 
 function logout()
 {
-
+    require 'base/dao.php';
     global $vue;
 
     $_SESSION = array();
@@ -52,10 +44,21 @@ function logout()
 }
 function enregUser()
 {
+    require 'base/dao.php';
     global $user;
 
+    // getCustom_id($client);
+    $rand_num = rand(001,999);
+    // datas en majuscule
+    $getNom_user = strtoupper($_POST['nom_user']);
+    $getPrenom_user = strtoupper($_POST['prenom_user']);
+    // concatenation nom et prenom
+    $n = substr($getNom_user, 0, 3);
+    $p = substr($getPrenom_user, 0, 3);
+    $card_id = $n . "_" . $p . "_" . $rand_num;
+
     $client = [
-    
+
         'nom_user' => filter_input(INPUT_POST, 'nom_user', FILTER_SANITIZE_SPECIAL_CHARS),
         'prenom_user' => filter_input(INPUT_POST, 'prenom_user', FILTER_SANITIZE_SPECIAL_CHARS),
         'adresse_user' => filter_input(INPUT_POST, 'adresse_user', FILTER_SANITIZE_SPECIAL_CHARS),
@@ -65,8 +68,7 @@ function enregUser()
         'categorie_user' => filter_input(INPUT_POST, 'categorie_user', FILTER_SANITIZE_SPECIAL_CHARS),
         'type_membre' => filter_input(INPUT_POST, 'type_membre', FILTER_SANITIZE_SPECIAL_CHARS),
         'creation_compte' => filter_input(INPUT_POST, 'creation_compte', FILTER_SANITIZE_SPECIAL_CHARS),
+        'card_id' => $card_id,
     ];
     setNewUser($client);
-    // $_SESSION['prenom_user'] = $client['prenom_user'];
-    // $_SESSION['categorie_user'] = $client['categorie_user'];
 }

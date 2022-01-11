@@ -4,6 +4,7 @@ function connexion()
     $dsn = 'mysql:host=localhost;dbname=bibliotheque_inconnu;charset=utf8';
     $userName = 'root';
     $password = '';
+
     try {
         return new PDO($dsn, $userName, $password);
     } catch (PDOException $err) {
@@ -11,6 +12,7 @@ function connexion()
         exit();
     }
 }
+
 function getAllArticleByCategorie($categ)
 {
 
@@ -42,13 +44,15 @@ function getUserByLogin($log)
     }
     return false;
 }
+
 function setNewUser($user)
 {
     $refPdo = connexion();
+    
+    $sqlSetNewUser = 'INSERT INTO users VALUES (null, :card_id, :nom_user, :prenom_user, :adresse_user, :email_user, :psw_user, :tel_user, :categorie_user, :type_membre, :creation_compte);';
+    $stat_user = $refPdo->prepare($sqlSetNewUser);
 
-    $sql = 'INSERT INTO users VALUES (null, null, :nom_user, :prenom_user, :adresse_user, :email_user, :psw_user, :tel_user, :categorie_user, :type_membre, :creation_compte);';
-    $stat_user = $refPdo->prepare($sql);
-
+    $stat_user->bindParam(':card_id', $user['card_id'], PDO::PARAM_STR);
     $stat_user->bindParam(':nom_user', $user['nom_user'], PDO::PARAM_STR);
     $stat_user->bindParam(':prenom_user', $user['prenom_user'], PDO::PARAM_STR);
     $stat_user->bindParam(':adresse_user', $user['adresse_user'], PDO::PARAM_STR);
@@ -59,11 +63,14 @@ function setNewUser($user)
     $stat_user->bindParam(':categorie_user', $user['categorie_user'], PDO::PARAM_STR);
     $stat_user->bindParam(':type_membre', $user['type_membre'], PDO::PARAM_STR);
     $stat_user->bindParam(':creation_compte', $user['creation_compte'], PDO::PARAM_STR);
+
     try {
-        getCustom_id($user);
         $stat_user->execute();
     } catch (PDOException $pdoErr) {
+        echo '<pre>';
         var_dump($pdoErr);
+        var_dump($stat_user);
+        echo '</pre>';
         throw new Exception('Login déjà existant! merci de rechercher un email unique');
     }
 }
@@ -74,31 +81,4 @@ function getDonneesPersos($user)
     $refPdo = connexion();
 
     $sql = 'SELECT * FROM users';
-}
-
-function getCustom_id($user) 
-{
-    $refPdo = connexion();
-
-    $sql = 'UPDATE users SET card_id=:card_id;';
-    $stat_user = $refPdo->prepare($sql);
-
-    //recuperer nom et prenom de la database
-    $stat_user = $lname = $_POST['nom_user'];
-    $stat_user = $fname = $_POST['prenom_user'];
-    // datas en majuscule
-    $lname = strtoupper($lname);
-    $fname = strtoupper($fname);
-
-    // concatenation nom et prenom
-    $l = substr($lname,1,3);
-    $f = substr($fname,1,3);
-
-    //recuperer id_user de la database
-    echo $lastId;
-
-    //initialisation customisation Id_user
-    $card_id = $l.'-'.$f.'-'.$lastId;
-    echo $card_id;
-    
 }
