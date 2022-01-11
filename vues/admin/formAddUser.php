@@ -1,10 +1,22 @@
+<?php
+
+
+?>
 <section id="fau_main">
     <div class="fau_dateJour">
         <li class="date_du_jour">Date du jour <span>[</span><?php echo date('d.m.Y') ?><span>]</span></li>
     </div>
     <h3 class="fau_h3">Ajout d'un nouveau membre</h3>
     <form class="fau_form" method="POST" enctype="multipart/form-data" action="index.php?entite=admin&action=newCompte">
+        
         <div class="fau_formContent">
+        <?php
+            if (isset($erreur) && !empty($erreur)) {
+                echo '<div class="erreur">';
+                echo $erreur;
+                echo '</div>';
+            }
+            ?>
             <label class="fau_label">Nom de famille: </label>
             <input class="fau_input" type="text" name="nom_user" required>
             <br><br>

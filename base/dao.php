@@ -30,7 +30,7 @@ function getUserByLogin($log)
 
     $refPdo = connexion();
 
-    $sql = 'SELECT * FROM users WHERE email_user =:identifiant limit 1';
+    $sql = 'SELECT * FROM users WHERE email_user =:identifiant';
     $stat_user = $refPdo->prepare($sql);
     $stat_user->bindParam(':identifiant', $log, PDO::PARAM_STR);
     $stat_user->execute();
@@ -46,11 +46,9 @@ function setNewUser($user)
 {
     $refPdo = connexion();
 
-    $sql = 'INSERT INTO users VALUES ( :null, :custom_id, :nom_user, :prenom_user, :adresse_user, :email_user, :psw_user, :tel_user, :categorie_user, :type_membre, :creation_compte);';
+    $sql = 'INSERT INTO users VALUES (null, null, :nom_user, :prenom_user, :adresse_user, :email_user, :psw_user, :tel_user, :categorie_user, :type_membre, :creation_compte);';
     $stat_user = $refPdo->prepare($sql);
 
-    $stat_user->bindParam(':id_user', $user['id_user'], PDO::PARAM_STR);
-    $stat_user->bindParam(':custom_id', $user['custom_id'], PDO::PARAM_STR);
     $stat_user->bindParam(':nom_user', $user['nom_user'], PDO::PARAM_STR);
     $stat_user->bindParam(':prenom_user', $user['prenom_user'], PDO::PARAM_STR);
     $stat_user->bindParam(':adresse_user', $user['adresse_user'], PDO::PARAM_STR);
@@ -62,11 +60,14 @@ function setNewUser($user)
     $stat_user->bindParam(':type_membre', $user['type_membre'], PDO::PARAM_STR);
     $stat_user->bindParam(':creation_compte', $user['creation_compte'], PDO::PARAM_STR);
     try {
+        getCustom_id($user);
         $stat_user->execute();
     } catch (PDOException $pdoErr) {
-        throw new Exception('Login déjà existant !');
+        var_dump($pdoErr);
+        throw new Exception('Login déjà existant! merci de rechercher un email unique');
     }
 }
+
 function getDonneesPersos($user)
 {
 
@@ -75,9 +76,29 @@ function getDonneesPersos($user)
     $sql = 'SELECT * FROM users';
 }
 
+function getCustom_id($user) 
+{
+    $refPdo = connexion();
 
-// function addOuvrage($isbn_ouvrage, $photo, $titre_ouvrage, $date_parution, $dispo, $id_auteur, $id_collection, $id_editeur) {
+    $sql = 'UPDATE users SET card_id=:card_id;';
+    $stat_user = $refPdo->prepare($sql);
 
-//     if(require())
+    //recuperer nom et prenom de la database
+    $stat_user = $lname = $_POST['nom_user'];
+    $stat_user = $fname = $_POST['prenom_user'];
+    // datas en majuscule
+    $lname = strtoupper($lname);
+    $fname = strtoupper($fname);
 
-// }
+    // concatenation nom et prenom
+    $l = substr($lname,1,3);
+    $f = substr($fname,1,3);
+
+    //recuperer id_user de la database
+    echo $lastId;
+
+    //initialisation customisation Id_user
+    $card_id = $l.'-'.$f.'-'.$lastId;
+    echo $card_id;
+    
+}

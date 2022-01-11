@@ -3,28 +3,6 @@
 require 'modeles/modele_user.php';
 
 switch ($action) {
-    case 'login':
-        $erreur = '';
-        $login = '';
-        $methode = $_SERVER['REQUEST_METHOD'];
-        if ($methode === 'POST') {
-            try {
-                login();
-                $vue = 'accueil';
-            } catch (Exception $e) {
-                echo 'passage dans erreur login';
-                $erreur = $e->getMessage();
-                $login = '';
-                $vue = 'connexion';
-            }
-        } else {
-            $vue = 'connexion';
-        }
-        break;
-
-    case 'deconnect':
-        logout();
-        break;
 
     case 'donneesPerso':
         $vue = 'client/tableauBord';
@@ -47,18 +25,19 @@ switch ($action) {
         break;
 
     case 'newCompte':
+        $erreur = '';
         $methode = $_SERVER['REQUEST_METHOD'];
         if ($methode === 'POST') {
             try {
                 enregUser();
                 $vue = 'admin/formAddUser';
                 echo 'echo "<div class="fau_success">
-                    <h3 class="fau_h3_success">L\'utilisateur a été créée avec succés.</h3>
+                    <h3 class="fau_h3_success">L\'utilisateur a été créé avec succés.</h3>
                     <p class="fau_p_success">Cliquez <a href="accueil">ici</a> pour retourner à la page d\'accueil</p>
                     </div>';
-            } catch (Exception $err) {
-                $erreur = $err->getMessage();
+            } catch (Exception $pdoErr) {
                 $vue = 'admin/formAddUser';
+                $erreur = $pdoErr->getMessage();  
             }
         } else {
             $erreur = '';

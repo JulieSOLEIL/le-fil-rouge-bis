@@ -8,15 +8,18 @@
 #------------------------------------------------------------
 
 CREATE TABLE users(
-        id_user        Int  Auto_increment  NOT NULL ,
-        nom_user       Varchar (125) NOT NULL ,
-        prenom_user    Varchar (125) NOT NULL ,
-        adresse_user   Varchar (125) NOT NULL ,
-        email_user     Varchar (125) NOT NULL ,
-        tel_user       Int NOT NULL ,
-        categorie_user Varchar (10) NOT NULL
-	,CONSTRAINT users_PK PRIMARY KEY (id_user)
-)ENGINE=InnoDB;
+        `id_user` int(3) NOT NULL,
+        `nom_user` varchar(125) NOT NULL,
+        `prenom_user` varchar(125) NOT NULL,
+        `adresse_user` varchar(125) NOT NULL,
+        `email_user` varchar(125) NOT NULL,
+        `psw_user` varchar(255) NOT NULL,
+        `tel_user` int(10) NOT NULL,
+        `categorie_user` varchar(10) NOT NULL,
+        `type_membre` varchar(10) NOT NULL,
+        `creation_compte` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 
 #------------------------------------------------------------
